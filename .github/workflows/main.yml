@@ -25,6 +25,7 @@ jobs:
           PORT:  22
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         with:
-          #source: "./dist"
+           # will put all file under this path
+          local_path: ./* # default is ./*
           target: "/var/www/html/"
           strip_components: 2  
