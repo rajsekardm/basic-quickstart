@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: php artisan key:generate
       - run: composer install
       - run: php artisan migrate
       - run: php artisan serve
